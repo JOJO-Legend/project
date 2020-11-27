@@ -1,0 +1,124 @@
+body,html{
+    background: rgba($color: #b3b3b3, $alpha: 0.1);
+    width: 100%;
+    height: 100%;}
+.warp{
+    position: relative;
+    // z-index: 99;
+    width: 100%;
+    height: 100%;}
+.main{
+    width: 750px;
+    height: 450px;
+    // margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    .close{
+        text-align: right;
+        padding: 10px 10px;
+        span{
+            cursor: pointer;
+            font-size: 18px;}}
+    .login{
+        height: 406px;
+        padding: 0 34px;
+        .left{
+            width: 340px;
+            height: 100%;
+            padding-top: 25px;
+            padding-left: 20px;
+            float: left;
+            .innerleft{
+                border-right: 0.5px solid #b6b1ac;}
+            .way{
+                margin: 10px 55px 0 55px;
+                font-size: 12px;
+                i{font-size: 16px;}
+            }
+            .leftmain{
+                margin: 0 55px;
+                width: 210px;
+                height: 300px;
+                position: relative;
+                h2{
+                    font-size: 26px;
+                    margin-bottom: 28px;}
+                .phone{
+                    margin-bottom: 18px;
+                    p{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 8px;
+                        span{font-size: 12px;}
+                        a{color: #000000;
+                            font-weight: bolder;
+                            font-size: 12px;
+                            border-bottom: 1px solid #000000;}}
+                    input{
+                        width: 100%;
+                        height: 32px;}}
+                .pass{
+                    margin-bottom: 18px;
+                    p{font-size: 12px;margin-bottom: 8px;}
+                    input{
+                        width: 100%;
+                        height: 32px;}}
+                .logincheck{
+                    display: flex;
+                    justify-content: space-between;
+                    .remember{font-size: 12px;}
+                    .forget{
+                        font-size: 12px;
+                        font-weight: bolder;
+                        border-bottom: 1px solid #000000;}}
+                .loginbtn{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 34px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: #181818;
+                    color: #ffffff;
+                    &:hover{
+                        background-color: rgba($color: #181818, $alpha: 0.8);}}}}
+        .right{
+            width: 340px;
+            height: 100%;
+            padding-top: 25px;
+            padding-right: 20px;
+            float: left;
+            .innerright{border-left: 0.5px solid #b6b1ac;}
+            .rightmain{
+                margin: 0 55px;
+                width: 210px;
+                height: 300px;
+                position: relative;
+                h2{
+                    font-size: 26px;
+                    margin-bottom: 28px;}
+                div{
+                    font-size: 12px;
+                    margin-bottom: 30px;}
+                p{
+                    line-height: 30px;
+                    font-size: 12px;
+                    i{
+                        margin-right: 3px;
+                        font-size: 16px;}}
+                .creatbtn{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 34px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: #181818;
+                    color: #ffffff;
+                    &:hover{
+                        background-color: rgba($color: #181818, $alpha: 0.8);}}}}}}

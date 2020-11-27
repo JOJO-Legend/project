@@ -1,0 +1,259 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+// 一些公共属性
+.public{
+    width: 910px;
+    margin: 0 auto;}
+.numchange{
+    width: 12px;
+    height: 12px;
+    border: 0.5px solid #bababa;
+    opacity: 0.3;
+    cursor: pointer;
+}
+// 给头部固定
+.header{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+//购物车标题样式
+.carttitle{
+    height: 32px;
+    margin-top: 110px;
+    .checktitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        .shoppingbag{
+            width: 100px;
+            height: 100%;
+            border-bottom: 1px solid #000;
+            padding-bottom: 14px;
+            font-size: 15px;
+        }
+        .pay{
+            width: 100px;
+            height: 100%;
+            color: #c0b7af;
+            border-bottom: 1px solid #c0b7af;
+            padding-bottom: 14px;
+            margin-left: 3px;
+            font-size: 15px;}
+        // 将此类名加给被点击的对象
+        .titlemask{
+            color: #c0b7af;
+            border-bottom: 1px solid #c0b7af;}}}
+
+// 购物车商品数量提示
+.total{
+    margin-top: 34px;
+    margin-bottom: 16px;
+    span{
+        font-size: 14px;}}
+// 对于商品的标题
+.goodstitle{
+    position: relative;
+    .goodstit{
+        width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 360px;
+        border-bottom: 1px solid #c0b7af;
+        font-size: 12px;
+        padding-bottom: 8px;
+        .goodscheck{
+            position: absolute;
+            left: 0;
+            top: 0;
+            span{
+                margin-left: 5px;}}
+        .goodsnum{
+            margin-left: 30px;}}}
+
+// 购物车商品列表及付款区域
+.goodsmain{
+    display: flex;
+    justify-content: space-between;
+    // 列表区域样式
+    .goodslist{
+        width: 600px;
+        height: 215px;
+        padding: 22px 0;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #c0b7af;
+        .listleft{
+            width: 350px;
+            height: 100%;
+            padding-left: 24px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            input{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);}
+            .productimg{
+                width: 120px;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;}}
+            .productdetail{
+                width: 200px;
+                height: 100%;
+                margin-left: 30px;
+                font-size: 12px;
+                .goodsname{
+                    margin-bottom: 5px;}
+                .goodsstyle{
+                    margin-top: 18px;
+                    color: #c0b7af;
+                    span{
+                        color: #181818;}}
+                .goodsstock{
+                    height: 65px;
+                    display: flex;
+                    align-items: flex-end;}}}
+        .listcenter{
+            width: 100px;
+            height: 100%;
+            padding-top: 16px;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            .numcut{
+                background: url(../img/cut.svg) no-repeat center;}
+            .numadd{
+                background: url(../img/add.svg) no-repeat center;}
+            input{
+                width: 30px;
+                height: 12px;
+                border: none;
+                text-align: center;
+                &::placeholder{
+                    color: #181818;}}
+            p{
+                color: #e30000;
+                font-size: 12px;
+                position: absolute;
+                top: 30px;
+                left: 0;}}
+        .listright{
+            width: 150px;
+            height: 100%;
+            padding-top: 10px;
+            position: relative;
+            p{
+                font-size: 14px;
+                text-align: right;}
+            .goodsdel{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: 12px;
+                i{
+                    font-size: 16px;
+                    margin-right: 4px;}}}
+    }
+
+
+    // 付款区域样式
+    .goodspay{
+        width: 274px;
+        height: 480px;
+        border: 1px solid #c0b7af;
+        .pay-top{
+            width: 100%;
+            height: 220px;
+            padding: 18px 22px 26px 22px;
+            background-color: #c0b7af;
+            .unitprice{
+                height: 36px;
+                line-height: 36px;
+                font-size: 12px;
+                display: flex;
+                justify-content: space-between;
+                .money{
+                    font-size: 14px;}}
+            .express{
+                height: 50px;
+                line-height: 36px;
+                font-size: 12px;
+                border-bottom: 1px solid #8b857f;
+                padding-bottom: 14px;
+                display: flex;
+                justify-content: space-between;
+                .bold{
+                    font-size: 14px;}}
+            .totalprice{
+                height: 55px;
+                line-height: 55px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                .money{
+                    font-size: 14px;}}
+            a{
+                display: block;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 12px;
+                background-color: #181818;
+                color: #ffffff;}}
+        .pay-bottom{
+            width: 100%;
+            height: 260px;
+            padding: 25px 22px;
+            .activity{
+                font-size: 12px;}
+            p{
+                font-size: 12px;
+                color: #c0b7af;
+                margin-top: 10px;}
+            .tankuang{
+                height: 22px;
+                margin-top: 14px;
+                a{
+                    display: block;
+                    width: 48px;
+                    height: 100%;
+                    border-bottom: 1px solid #181818;
+                    font-size: 12px;
+                    color: #181818;}}
+            .payment{
+                font-size: 12px;
+                margin-top: 20px;}
+            .payway{
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-evenly;
+                span{
+                    display: inline-block;
+                    width: 80px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    cursor: pointer;
+                    border: 1px solid #181818;
+                    border-radius: 30px;
+                    &:hover{
+                        color: #ffffff;
+                        background-color: #181818;}}}}}}
+
+
+
+
+

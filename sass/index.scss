@@ -1,98 +1,167 @@
-// 变量 $+变量名
-$w:400px;
-$h:200px;
-$c:red;
-$len:50%*10; // 500%
-/* 标题样式 */
-h1{
-  width: $w;
-  height: $h;
-  color: $c;
-  background-color: #ccc;
-}
+.brandwarp{
+    position: relative;
+    height: 60px;
+    // margin: 0 auto;
+    background-color: #f6f6f6;
+    .brand{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 598px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        // background-color: lightblue;
+        .brand-left{
+            float: left;
+            background: url(../img/logoleft.jpg) no-repeat;
+            cursor: pointer;
+            opacity: 0.5;
+            width: 278px;
+            height: 60px;
+            .maskleft{
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #f9f9f9, $alpha: 0.5);}}
+        .brand-right{
+            float: left;
+            background: url(../img/logoright.jpg) no-repeat;
+            // opacity: 0.5;
+            cursor: pointer;
+            width: 320px;
+            height: 60px;
+            .maskright{
+                width: 100%;
+                height: 100%;
+                // background: rgba($color: #f9f9f9, $alpha: 0.5);
+            }}}}
 
-// sass中的注释有两种
-// 1. // sass有的注释，不会被编译到css文件中
-// /* xxx */ 会被编译到css文件中
-
-// 嵌套语法
-.box{
-  width: $w;
-  background-color: lightblue;
-  h2{
-    font-size: 30px;
-    color: blue;
-  }
-  .show{
-    width: 300px;
-    height: 100px;
-    span{
-      color: red;
+.snav{
+    height: 48px;
+    line-height: 48px;
+    font-size: 12px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: #000000;}
+    b{
+        margin-left: 25px;
     }
-    p{
-      color: yellow;
-    }
-  }
-}
+    // 还剩下三角形没写
+    b::after{
+        content: ' ';
+        display: inline-block;
+        
+    }}
 
-// & 指向父选择器
-a{
-  color: blue;
-  &:hover{
-    color: red;
-  }
-}
-.content{
-  width: 500px;
-  &-title{
-    color: red;
-  }
-  &-main{
-    color: blue;
-  }
-}
+// 商品内容样式
+.goods{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+    .goodsitem{
+        width: 326px;
+        height: 603px;
+        margin: 3px 5px;
+        position: relative;
+        i{
+            position: absolute;
+            top: 24px;
+            right: 20px;
+            font-size: 18px;}
+        b{
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 180px;
+            color: #181818;
+            font-size: 12px;
+            border: 1px solid #181818;
+            background-color: rgba($color: #ffffff, $alpha: 0.7);
+            z-index: 11;
+            &:hover{
+                background-color: #181818;
+                color: #ffffff;}}
+        .changeimg{
+            display: none;}
+        &:hover .showimg{
+            display: none;}
+        &:hover .changeimg{
+            display: block;}
+        span{
+            position: absolute;
+            display: block;
+            font-size: 12px;
+            width: 62px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background-color: #c2c2c2;
+            color: #181818;
+        }
+        img{
+            width: 326px;}
+        p{
+            height: 36px;
+            width: 100%;
+            margin: 21px 0;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-size: 14px;
+                line-height: 36px;
+                text-align: center;
+                color: #181818;}}
+        h2{
+            text-align: center;
+            font-size: 14px;}}
 
-// @import 引入外部样式
-@import 'header.scss';
+    .goodsmodel{
+        height: 600px;
+        position: relative;
+        img{
+            height: 100%;
+        }
+        .innertext{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            z-index: 10;
+            text-align: center;
+            a{
+                color: #ffffff;
+                font-size: 28px;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 60%;}
+            p{
+                position: absolute;
+                left: 50%;
+                bottom: 30%;
+                transform: translateX(-50%);
+                color: #ffffff;
+                font-size: 14px;
+                border: 1px solid #ffffff;
+                padding: 5px 50px;
+                border-radius: 2px;
+                cursor: pointer;
+                &:hover{
+                    background-color: #444444;
+                    border-color: rgba($color: #000000, $alpha: 0);}}}}}
 
-// @mixin 混合器
-@mixin nostyle {
-  list-style: none;
-  li{
-    padding: 0;
-    color: blue;
-  }
-}
-.list{
-  width: 500px;
-  @include nostyle;
-}
-
-// 混合器传参
-@mixin common($w,$h,$c) {
-  width: $w;
-  height: $h;
-  color: $c;
-}
-.box1{
-  background-color: #ccc;
-  @include common(500px,200px,red);
-}
-.box2{
-  padding: 10px;
-  @include common(300px,100px,blue);
-}
-
-// 继承
-.box3{
-  padding: 20px;
-  margin: 10px;
-  font-size: 20px;
-}
-.box4{
-  width: 500px;
-  background: pink;
-  @extend .box3;
-}
 
 
