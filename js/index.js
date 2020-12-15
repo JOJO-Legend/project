@@ -15,31 +15,37 @@ $(function(){
 //       $.each(json,function (index,item){
 //         goodsitem += `<div class="goodsitem">
 //         <span>${item.title}</span>
-//         <a href="#" class="showimg"><img src="${item.imgurl1}" alt=""></a>
-//         <a href="#" class="changeimg"><img src="${item.imgurl2}" alt=""><i class="iconfont icon-aixin"></i><b>${item.add}</b></a>
+//         <a href="#" class="showimg"><img src="${item.imgur11}" alt=""></a>
+//         <a href="#" class="changeimg"><img src="${item.imgur2}" alt=""><i class="iconfont icon-aixin"></i><b>${item.add}</b></a>
 //         <p><a href="#">${item.details}</a></p>
 //         <h2>${item.price}</h2>
 //       </div>`
 //       })
-//       $('.goods').html(goodsitem)
+//       $('.goods').append(goodsitem)
 
-    //   $.each(json,function (index,item){
-    //     goodsmodel += `<div class="goodsmodel">
-    //     <a href="#">
-    //       <img src="${item.imgurl}" alt="" class="showimg">
-    //       <div class="innertext">
-    //         <a href="#">${item.explain}</a>
-    //         <p>${item.addcart}</p>
-    //       </div>
-    //     </a>
-    //   </div>`
-    //   })
-    //   $('.goods').html(goodsmodel)
-    // }
-//   })
+//       $.each(json,function (index,item){
+//         goodsmodel += `<div class="goodsmodel">
+//         <a href="#">
+//           <img src="${item.imgurl}" alt="" class="showimg">
+//           <div class="innertext">
+//             <a href="#">${item.explain}</a>
+//             <p>${item.addcart}</p>
+//           </div>
+//         </a>
+//       </div>`
+//       })
+//       $('.goods').append(goodsmodel)
+   // }
+  //})
+
+
+
 
 //加入购物车
-$(".goodsitem .changeimg b").on('click','.changeimg b',function(){
+$(".goodsitem .changeimg b").click(function(){
+    location.href('./cart.html')
+
+})
     //获取当前商品的编号
     var code = $(this).attr('code')
 
@@ -66,13 +72,7 @@ $(".goodsitem .changeimg b").on('click','.changeimg b',function(){
     //更新本地储存数据
     localStorage.setItem('goods',JSON.stringify(goodsArr))
 
-})
-
-
-
-
-
-
+    
 
 
 

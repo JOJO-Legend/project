@@ -7,7 +7,6 @@ let del = require('del')
 task('delDist', async ()=>{
   await del('./dist')
 })
-
 // 处理图片
 task('img', async ()=>{
   src('./img/*.*')

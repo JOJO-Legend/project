@@ -57,14 +57,27 @@ $(function (){
                     return false
                 }
             })
-
+            // 判断购物车是否还有数据
+            if(goodsArr.length > 0){
+              //更新本地数据
+              localStorage.setItem('goodsitem',JSON.stringify(goodsArr))
+            }else{
+              //清除本地数据
+              localStorage.removeItem('goodsitem')
+              var nodata = '<listleft style="line-height: 215px;text-align: center;">购物车暂无任何商品！</listleft>'
+              $('.list').html(nodata)
+            }
+            alert('商品已从购物车移除')
         })
+    }else{//没数据
+      var nodata = '<listleft style="line-height: 215px;text-align: center;">购物车暂无任何商品！</listleft>'
+      $('.listleft').html(nodata)
+    }
 
-
-
-        }
-
-
+    // $(".goodsitem .changeimg b").on('click',function(){
+    //     // location.url
+        
+    // })
 
 
 

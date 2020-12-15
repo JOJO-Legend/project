@@ -30,17 +30,32 @@ html,body{
     ul{
         float: left;
         margin-left: 43px;
-        width: 450px;
+        width: 514px;
         height: 80px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         li{
-            line-height: 80px;
-            float: left;
-            margin-right: 42px;
-            font-size: 14px;
+            flex-grow: 1;
+            height: 60px;
+            text-align: center;
+            span a{
+                color: red;}
+            a{
+                font-size: 14px;
+                display: inline-block;
+                height: 36px;
+                line-height: 36px;
+                color: #181818;
+                border-bottom: 1px solid rgba($color: #333333, $alpha: 0);
+                &:hover{
+                    transition: 1.5s;
+                    border-bottom: 1px solid rgba($color: #333333, $alpha: 1);}}
         }
     }
     .header-right{
-        width: 350px;
+        width: 330px;
         line-height: 80px;
         float: right;
         b{
@@ -49,6 +64,8 @@ html,body{
             height: 30px;
             border-bottom: 1px solid #333;
             padding-bottom: 5px;
+            i{
+                color: #181818;}
             input{
                 width: 150px;
                 height: 25px;
@@ -57,6 +74,7 @@ html,body{
                 color: #939393;
                 border: none;}}
         span{
+            color: #181818;
             margin-left: 25px;}}}
 
 
