@@ -8,8 +8,7 @@
 <link rel="stylesheet" href="./css/iconfont.css">
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/index.css">
-<script src="./js/jquery-1.8.3.js"></script>
-<script src="./js/index.js"></script>
+<!-- <script src="./js/jquery-1.8.3.js"></script> -->
 </head>
 <body> 
 <!-- 公共区域头部 -->
@@ -32,41 +31,43 @@
       <!-- 搜索区域及功能键 -->
       <div class="header-right">
         <b>
-          <i class="iconfont icon-sousuo"></i>
-          <input type="text" value="2020秋冬优雅之旅">
+            <i class="iconfont icon-sousuo"></i>
+            <input type="text" value="2020秋冬优雅之旅">
         </b>
-        <span class="iconfont icon-male"></span>
-        <span class="iconfont icon-gouwudai"></span>
-        <span class="iconfont icon-dingwei"></span>
-      </div>
+        <a href="./login.html"><span class="iconfont icon-male"></span></a>
+        <a href="./cart.html"><span class="iconfont icon-gouwudai"></span></a>
+        <a href="https://map.baidu.com"><span class="iconfont icon-dingwei"></span></a>
+    </div>
     </div>
     <!-- 公共区域的品牌类别 -->
-    <div class="brandwarp">
-      <div class="brand">
-        <div class="brand-left">
-          <div class="maskleft"></div>
-          <!-- GIORGIO ARMANI -->
+    <div class="fixdtitle">
+      <div class="brandwarp">
+        <div class="brand">
+          <div class="brand-left">
+            <div class="maskleft"></div>
+            <!-- GIORGIO ARMANI -->
+          </div>
+          <div class="brand-right">
+            <div class="maskright"></div>
+            <!-- EMPORIO ARMANI -->
+          </div>
         </div>
-        <div class="brand-right">
-          <div class="maskright"></div>
-          <!-- EMPORIO ARMANI -->
+      </div>
+      <!-- 筛选项 -->
+      <div class="snav">
+        <div class="snav-left">
+          <a href="#">首页</a> |
+          <a href="#">Emporio Armani</a> |
+          <a href="#">全部当季新款</a>
+        </div>
+        <div class="snav-center">共找到343件商品</div>
+        <div class="snav-right">
+          <b>类别<span></span></b>
+          <b>筛选<span></span></b>
+          <b>排序：最佳匹配<span></span></b>
         </div>
       </div>
-    </div>
-    <!-- 筛选项 -->
-    <div class="snav">
-      <div class="snav-left">
-        <a href="#">首页</a> |
-        <a href="#">Emporio Armani</a> |
-        <a href="#">全部当季新款</a>
       </div>
-      <div class="snav-center">共找到343件商品</div>
-      <div class="snav-right">
-        <b>类别<span></span></b>
-        <b>筛选<span></span></b>
-        <b>排序：最佳匹配<span></span></b>
-      </div>
-    </div>
     <!-- 商品列表 -->
     <div class="goods">
       <!-- 单件商品的布局 -->
@@ -343,7 +344,7 @@
     </div>
 
   </div>
-
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

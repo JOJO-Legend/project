@@ -59,12 +59,14 @@ body,html{
                             border-bottom: 1px solid #000000;}}
                     input{
                         width: 100%;
+                        padding: 8px;
                         height: 32px;}}
                 .pass{
                     margin-bottom: 18px;
                     p{font-size: 12px;margin-bottom: 8px;}
                     input{
                         width: 100%;
+                        padding: 8px;
                         height: 32px;}}
                 .logincheck{
                     display: flex;
@@ -122,3 +124,9 @@ body,html{
                     color: #ffffff;
                     &:hover{
                         background-color: rgba($color: #181818, $alpha: 0.8);}}}}}}
+
+
+// 注册页
+.logon{
+    display: none;
+}

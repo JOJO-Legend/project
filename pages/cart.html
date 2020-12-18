@@ -56,7 +56,7 @@
       <div class="goodstit">
       <!-- 全选框 -->
         <div class="goodscheck">
-          <input type="checkbox"><span>全选</span>
+          <input type="checkbox" name="quan"><span>全选</span>
         </div>
         <!-- 数量 -->
         <div class="goodsnum">数量</div>
@@ -71,7 +71,7 @@
       <!-- 商品列表区域 -->
       <div class="goodslist">
         <div class="listleft">
-          <input type="checkbox">
+          <input type="checkbox" name="xuan">
           <div class="productimg"><a href="#"><img src="./img/clothes06.jpg" alt=""></a></div>
           <div class="productdetail">
             <div class="goodsname">EMPORIO ARMANI</div>
@@ -81,6 +81,7 @@
             <div class="goodsstock">仅剩1件</div>
           </div>
         </div>
+        <!-- 商品数量的增减 -->
         <div class="listcenter">
           <div class="numcut numchange"></div>
           <input type="text" placeholder="1">
@@ -88,7 +89,9 @@
           <p>商品已达购买上限</p>
         </div>
         <div class="listright">
+          <!-- 商品总价 -->
           <p>￥ 2,300</p>
+          <!-- 删除商品 -->
           <div class="goodsdel"><i class="iconfont icon-diqiu"></i>删除</div>
         </div>
       </div>
@@ -248,6 +251,8 @@
     </div>
 
   </div>
+  <script src="./js/jquery-1.8.3.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 
 </html>

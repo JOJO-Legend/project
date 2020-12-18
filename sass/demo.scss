@@ -6,6 +6,37 @@ body,html{
     width: 100%;
     height: 100%;
     position: relative;}
+    // 客服及回到顶部
+.kefu{
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #181818;
+    color: #ffffff;
+    position: fixed;
+    right: 8px;
+    bottom: 33%;
+    font-size: 12px;
+    z-index: 111;
+    cursor: pointer;
+    border-radius: 2px;}
+.backtop{
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f8f7f5;
+    color: #333333;
+    text-align: center;
+    position: fixed;
+    right: 8px;
+    bottom: 15%;
+    font-size: 12px;
+    z-index: 111;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none;}
+// 头部
 .fixdheader{
     position: fixed;
     top: 0;
@@ -286,27 +317,6 @@ body,html{
                     background-color: #444444;
                     border-color: rgba($color: #000000, $alpha: 0);}}}}}
     
-// .two{
-//     background-color: #292A2E;
-//     color: #ffffff;
-//     a{
-//         overflow: hidden;
-//         .bgcimg{
-//             width: 200px;
-//             height: 18px;
-//             margin: 0 auto;
-//             background: url(./img/logo.svg) no-repeat center  cover;
-//             &::after{
-//             content: '';
-//             display: block;
-//             height: 100%;
-//             transform: translateX(-100%);
-//             background: inherit;
-//             filter: drop-shadow(144px 0 0 #fff);}
-//         }
-//     }
-// }
-
 .three{
     height: 110px;
     margin: 0;
